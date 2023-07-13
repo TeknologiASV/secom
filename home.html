@@ -1,0 +1,148 @@
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+			<div class="col-sm-6">
+				<h1 class="m-0 text-dark">Home</h1>
+			</div><!-- /.col -->
+			<div class="col-sm-6">
+				<ol class="breadcrumb float-sm-right">
+					<li class="breadcrumb-item active">Home</li>
+				</ol>
+			</div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<section class="content">
+	<div class="container-fluid">
+    <h2>Wilayah Persekutuan</h2>
+    <div class="row" id="productList">
+      <div class="col-3" id="productDetail" data-productId="bilik G1" onclick="bilikClick('Jinjang')">
+        <div class="card card-solid">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <h3 class="d-inline-block">Jinjang</h3>
+                <div class="col-12"><img src="images/room.jpeg" class="product-image" alt="Product Image"></div>
+              </div>
+            </div>
+          </div><!-- /.card-body -->
+        </div><!-- /.card -->
+      </div><!-- /.col -->
+      <div class="col-3" id="productDetail" data-productId="bilik 72" onclick="bilikClick('Bandar Sri Permaisuri')">
+        <div class="card card-solid" id="breakthroughIcon">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <h3 class="d-inline-block">Sri Permaisuri</h3>
+                <div class="col-12"><img src="images/room.jpeg" class="product-image" alt="Product Image"></div>
+              </div>
+            </div>
+          </div><!-- /.card-body -->
+        </div><!-- /.card -->
+      </div><!-- /.col -->
+      <div class="col-3" id="productDetail" data-productId="bilik 73" onclick="bilikClick('Cheras')">
+        <div class="card card-solid">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <h3 class="d-inline-block">Cheras</h3>
+                <div class="col-12"><img src="images/room.jpeg" class="product-image" alt="Product Image"></div>
+              </div>
+            </div>
+          </div><!-- /.card-body -->
+        </div><!-- /.card -->
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+
+    <h2>Selangor</h2>
+    <div class="row" id="productList">
+      <div class="col-3" id="productDetail" data-productId="bilik 71" onclick="bilikClick('Rawang')">
+        <div class="card card-solid">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <h3 class="d-inline-block">Rawang</h3>
+                <div class="col-12"><img src="images/room.jpeg" class="product-image" alt="Product Image"></div>
+              </div>
+            </div>
+          </div><!-- /.card-body -->
+        </div><!-- /.card -->
+      </div><!-- /.col -->
+      <div class="col-3" id="productDetail" data-productId="bilik 72" onclick="bilikClick('Ulu Yam')">
+        <div class="card card-solid" id="warningIcon">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <h3 class="d-inline-block">Ulu Yam</h3>
+                <div class="col-12"><img src="images/room.jpeg" class="product-image" alt="Product Image"></div>
+              </div>
+            </div>
+          </div><!-- /.card-body -->
+        </div><!-- /.card -->
+      </div><!-- /.col -->
+      <div class="col-3" id="productDetail" data-productId="bilik 73" onclick="bilikClick('Kajang')">
+        <div class="card card-solid">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <h3 class="d-inline-block">Kajang</h3>
+                <div class="col-12"><img src="images/room.jpeg" class="product-image" alt="Product Image"></div>
+              </div>
+            </div>
+          </div><!-- /.card-body -->
+        </div><!-- /.card -->
+      </div><!-- /.col -->
+      <div class="col-3" id="productDetail" data-productId="bilik 74" onclick="bilikClick('Shah Alam')">
+        <div class="card card-solid">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <h3 class="d-inline-block">Shah Alam</h3>
+                <div class="col-12"><img src="images/room.jpeg" class="product-image" alt="Product Image"></div>
+              </div>
+            </div>
+          </div><!-- /.card-body -->
+        </div><!-- /.card -->
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+	</div><!-- /.container-fluid -->
+</section><!-- /.content -->
+
+<script>
+$(function () {
+  setInterval(blinkElement, 2000);
+  setInterval(blinkElement2, 2000);
+});
+
+function bilikClick(id){
+  $('#spinnerLoading').show();
+  bilik = id;
+  console.log(bilik);
+
+  $.get('bilik.html', function(data) {
+    $('#mainContents').html(data);
+    $('#spinnerLoading').hide();
+  });
+}
+
+function blinkElement() {
+  $('#breakthroughIcon').css('background-color', 'red');
+
+  setTimeout(function(){
+    $('#breakthroughIcon').css('background-color', 'white');
+  }, 1000);
+}
+
+function blinkElement2() {
+  $('#warningIcon').css('background-color', 'yellow');
+
+  setTimeout(function(){
+    $('#warningIcon').css('background-color', 'white');
+  }, 1000);
+}
+</script>
+</body>
+</html>
