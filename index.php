@@ -20,7 +20,7 @@ else{
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SECOM | Perimeter Monitoring</title>
 
-  <!--link rel="icon" href="images/logo.png" type="image"-->
+  <link rel="icon" href="images/logo.png" type="image">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
@@ -111,11 +111,11 @@ else{
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: white;">
     <!-- Brand Logo -->
-    <a href="#" class="brand-link">
-      <!--img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"-->
-      <span class="brand-text font-weight-light">Scicom</span>
+    <a href="#" class="brand-link logo-switch">
+      <img src="images/logo.png" alt="Sneakercube Logo" class="brand-image-xl logo-xl">
+      <img src="images/logo.png" alt="Sneakercube Logo" class="brand-image-xl logo-xs">
     </a>
 
     <!-- Sidebar -->
