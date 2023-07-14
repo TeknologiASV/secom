@@ -18,7 +18,7 @@ else{
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SECOM | Dashboard</title>
+  <title>SECOM | Perimeter Monitoring</title>
 
   <!--link rel="icon" href="images/logo.png" type="image"-->
   <!-- Google Font: Source Sans Pro -->
@@ -128,7 +128,7 @@ else{
           <li class="nav-item">
             <a href="#home" data-file="home.html" class="nav-link link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>Main Page</p>
+              <p>Perimeter Monitoring</p>
             </a>
           </li>
           <li class="nav-item">
